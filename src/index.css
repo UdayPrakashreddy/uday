@@ -567,3 +567,342 @@ header {
 .danger-text { color: var(--danger); }
 .warning-text { color: var(--warning); }
 .info-text { color: var(--info); }
+
+/* Light Theme Variables (Cream Color Theme) */
+.light-theme {
+  --bg-dark: #fbfaf5;
+  --bg-gradient: radial-gradient(circle at top right, #fffefe 0%, #faf8f2 50%, #f4eee1 100%);
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --card-hover-bg: rgba(255, 255, 255, 0.94);
+  --card-border: rgba(141, 131, 122, 0.12);
+  --card-border-hover: rgba(99, 102, 241, 0.35);
+  --text-primary: #2d2925;
+  --text-secondary: #5d564f;
+  --text-muted: #8d837a;
+  --primary-glow: rgba(99, 102, 241, 0.12);
+  --success-glow: rgba(16, 185, 129, 0.12);
+  --danger-glow: rgba(244, 63, 94, 0.12);
+  --warning-glow: rgba(251, 191, 36, 0.12);
+  --info-glow: rgba(14, 165, 233, 0.12);
+}
+
+.light-theme .input-field {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2d2925;
+  border-color: rgba(141, 131, 122, 0.2);
+}
+.light-theme .input-field:focus {
+  background: #ffffff;
+}
+.light-theme .search-field {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2d2925;
+  border-color: rgba(141, 131, 122, 0.2);
+}
+.light-theme .select-field {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2d2925;
+  border-color: rgba(141, 131, 122, 0.2);
+}
+.light-theme .student-table th {
+  background: rgba(244, 239, 230, 0.9);
+  color: #5d564f;
+  border-bottom: 1px solid rgba(141, 131, 122, 0.15);
+}
+.light-theme .student-table td {
+  border-bottom: 1px solid rgba(141, 131, 122, 0.1);
+}
+.light-theme .student-table tr:hover td {
+  background: rgba(141, 131, 122, 0.04);
+}
+.light-theme .roll-badge {
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--primary);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+/* Header Action Controls */
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.control-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.control-btn:hover {
+  border-color: var(--card-border-hover);
+  transform: translateY(-1px);
+}
+
+.control-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .theme-btn {
+    position: static;
+    margin: 1rem auto 0 auto;
+  }
+}
+
+/* Student Cards Grid Layout */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.student-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-border-hover);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.card-roll {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.card-performance {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.card-perf-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}
+
+/* CSS-based Grade Distribution Histogram Styling */
+.distribution-panel {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--card-border);
+  padding-top: 1rem;
+}
+
+.distribution-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.histogram-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 90px;
+  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.5rem;
+  gap: 6px;
+}
+
+.histogram-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+  group: hover;
+}
+
+.histogram-fill {
+  width: 100%;
+  min-height: 4px;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.histogram-fill.grade-a { background: linear-gradient(to top, #6366f1, #818cf8); }
+.histogram-fill.grade-b { background: linear-gradient(to top, #0ea5e9, #38bdf8); }
+.histogram-fill.grade-c { background: linear-gradient(to top, #10b981, #34d399); }
+.histogram-fill.grade-d { background: linear-gradient(to top, #fbbf24, #fcd34d); }
+.histogram-fill.grade-f { background: linear-gradient(to top, #f43f5e, #fb7185); }
+
+.histogram-value {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
+
+.histogram-label {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Bulk actions row styles */
+.bulk-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.bulk-btn {
+  background: transparent;
+  border: 1px dashed var(--card-border);
+  color: var(--text-muted);
+  font-size: 0.775rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.bulk-btn:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.bulk-btn.danger-hover:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: var(--danger-glow);
+}
+
+/* Attendance Styling */
+.attendance-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.attendance-badge.good {
+  background: var(--success-glow);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.attendance-badge.warning {
+  background: var(--warning-glow);
+  color: var(--warning);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.attendance-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+

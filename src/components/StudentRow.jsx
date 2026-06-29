@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const StudentRow = ({ student, onDelete }) => {
-  const { rollNumber, name, marks } = student;
+  const { rollNumber, name, marks, attendance } = student;
   const [confirmDelete, setConfirmDelete] = useState(false);
 
   const isPass = marks >= 40;
@@ -43,6 +43,22 @@ const StudentRow = ({ student, onDelete }) => {
               style={{
                 width: `${marks}%`,
                 backgroundColor: progressColor
+              }}
+            />
+          </div>
+        </div>
+      </td>
+      <td>
+        <div className="attendance-wrapper">
+          <span className="attendance-badge good">
+            {attendance}%
+          </span>
+          <div className="progress-bar-container">
+            <div
+              className="progress-bar"
+              style={{
+                width: `${attendance}%`,
+                backgroundColor: 'var(--success)'
               }}
             />
           </div>
